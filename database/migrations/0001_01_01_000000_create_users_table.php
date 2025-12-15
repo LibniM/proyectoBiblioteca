@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();//se configura nulleable
+            $table->string('google_id')->nullable();//se agrega el campo, nulleable
             $table->rememberToken();
             $table->timestamps();
         });
